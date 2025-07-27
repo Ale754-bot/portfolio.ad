@@ -10,7 +10,7 @@ const proyectos = [
     id: 'noticias',
     titulo: 'Web - Noticias',
     descripcion: 'Portal informativo con secciones de Economía, Cultura y Deportes.',
-    imagen: '/web1.png',
+    imagen: '/web1.PNG',
     link: 'https://noticiaas.vercel.app/',
   },
   {
