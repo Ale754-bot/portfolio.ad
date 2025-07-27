@@ -161,24 +161,36 @@ return (
     </div>
 
     {imagenIndex !== null && (
-  <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center backdrop-blur-sm">
-    <div className="relative max-w-4xl w-full p-4 text-center">
-      {/* Botón cerrar */}
+  <motion.div
+    className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center backdrop-blur-sm"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.3 }}
+  >
+    <motion.div
+      className="relative max-w-4xl w-full p-4 text-center"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.95, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <button
-        className="absolute top-4 right-4 text-[#00FFC3] text-2xl font-bold"
+        className="absolute top-4 right-4 text-[#00FFC3] text-2xl font-bold hover:scale-110 transition-transform"
         onClick={() => setImagenIndex(null)}
       >
         ✕
       </button>
 
-      {/* Imagen actual */}
-      <img
+      <motion.img
         src={proyecto.galeria[imagenIndex]}
         alt={`imagen ampliada ${imagenIndex}`}
         className="max-w-full max-h-[80vh] object-contain rounded-md mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
       />
 
-      {/* Navegación centrada debajo */}
       <div className="flex justify-center gap-6 mt-6 text-[#00FFC3]">
         <button
           disabled={imagenIndex === 0}
@@ -200,9 +212,10 @@ return (
           </svg>
         </button>
       </div>
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
 )}
+
 
   </>
 );
