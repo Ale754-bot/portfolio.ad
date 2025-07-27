@@ -13,7 +13,7 @@ const data = {
     historia: 
     'Estructura básica de una web (HTML). Estilos con CSS. Primeros pasos con diseño responsive. Importancia del diseño visual en la experiencia del usuario',
     tecnologias: ['HTML', 'CSS'],
-    imagen: '/web1.png',
+    imagen: '/web1.PNG',
     galeria: ['/web1.PNG', '/web2.PNG', '/1.PNG', '/2.PNG', '/3.PNG'],
     link: 'https://noticiaas.vercel.app/',
   },
